@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Geist', sans-serif;
+    background-color: #000000;
+    overflow-x: hidden;
+}
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 24px;
+    padding: 420px 16px 80px;
+    background: linear-gradient(180deg, 
+        rgba(0, 0, 0, 0) 0%, 
+        rgba(4, 72, 199, 0.71) 31%, 
+        rgba(121, 90, 224, 1) 47%, 
+        rgba(4, 72, 199, 0.71) 72%, 
+        rgba(0, 0, 0, 0) 98%),
+        #000000;
+    position: relative;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.text-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-self: stretch;
+}
+
+.hero-text {
+    font-family: 'Geist', sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 1em;
+    letter-spacing: -0.03em;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.7);
+    width: fit-content;
+}
+
+.neon-logo {
+    width: 100%;
+    height: 171.24px;
+    object-fit: contain;
+    fill: #FFFFFF;
+}
+
+.spacer {
+    width: 300px;
+    height: 30px;
+    flex-shrink: 0;
+}
+
+.video-container {
+    width: 100%;
+    height: 796px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-image: url('assets/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 4px 120px 0px rgba(130, 151, 209, 0.65);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-video {
+    width: 100%;
+    height: 100%;
+    max-width: 1496px;
+    max-height: 796px;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1600px) {
+    .hero-video {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 200px 16px 40px;
+    }
+    
+    .hero-text {
+        font-size: 32px;
+    }
+    
+    .neon-logo {
+        height: auto;
+        max-height: 120px;
+    }
+    
+    .video-container {
+        height: 400px;
+    }
+    
+    .spacer {
+        width: 100%;
+        height: 20px;
+    }
+}
